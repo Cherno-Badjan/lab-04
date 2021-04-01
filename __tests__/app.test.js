@@ -35,5 +35,12 @@ beforeEach(async() => {
     .get('/api/v1/orders')
     expect(res.body).toEqual([order]);
   })
+
+  it('gets one order by id', async () => {
+    const res = await request(app)
+    .get(`/api/v1/orders/${order.id}`)
+
+    expect(res.body).toEqual(order);
+  })
 })
 

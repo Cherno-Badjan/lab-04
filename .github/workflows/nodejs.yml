@@ -18,3 +18,8 @@ jobs:
       env:
         CI: true
         DATABASE_URL: postgres://alchemy:alchemy@postgres:5432/alchemy
+        ACCESS_KEY_ID: AKIARSIT2ALM6XAZXALL
+        SECRET_ACCESS_KEY: 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
+        REGION: us-west-2
+        AWS_EMAIL: badjancherno@gmail.com
+
