@@ -45,7 +45,7 @@ beforeEach(async() => {
   it('updates one order by id & sends an email', () => {
     return request(app)
       .put(`/api/v1/orders/${order.id}`)
-      .send({ quantity: 30 })
+      .send({ quantity: 40 })
       .then(() => {
         expect(amazonSes.sendEmail).toHaveBeenCalledTimes(1);
       });
