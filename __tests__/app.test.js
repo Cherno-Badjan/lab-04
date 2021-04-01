@@ -42,5 +42,20 @@ beforeEach(async() => {
 
     expect(res.body).toEqual(order);
   })
+  it('updates one order by id & sends an email', () => {
+    return request(app)
+      .put(`/api/v1/orders/${order.id}`)
+      .send({ quantity: 30 })
+      .then(() => {
+        expect(amazonSes.sendEmail).toHaveBeenCalledTimes(1);
+      });
+  })
+  it('deletes one order by id & sends an email', () => {
+    return request(app)
+      .delete(`/api/v1/orders/${order.id}`)
+      .then(() => {
+        expect(amazonSes.sendEmail).toHaveBeenCalledTimes(1);
+      });
+  })
 })
 
