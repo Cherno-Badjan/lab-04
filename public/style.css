@@ -1,0 +1,19 @@
+body, button, input {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: bisque;
+}
+main {
+    text-align: center;
+}
+ol {
+    text-align: start;
+}
+legend {
+    padding-bottom: 10px;
+}
+fieldset {
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
